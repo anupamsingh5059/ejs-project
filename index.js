@@ -4,6 +4,7 @@ const app = express()
 app.use(express.urlencoded({ extended: false }));
 
 app.set("view engine", 'ejs')
+app.use(express. static("public"))
 app.get('/', (req, res)=>{
 
     res.send("Home Page")
