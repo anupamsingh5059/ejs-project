@@ -12,7 +12,19 @@ app.get('/', (req, res)=>{
 
 app.get('/about', (req, res)=>{
 
-    res.send("About Page")
+        // let items =["Apple", "Mango", "Banana"]; 
+
+        var users = [
+                    { id: 1, name: "Anupam", email: "anupam@example.com" },
+                    { id: 2, name: "Rahul", email: "rahul@example.com" },
+                    { id: 3, name: "Suman", email: "suman@example.com" }
+                ];
+                    res.render("about", {
+                                    title: 'About Page',
+                                    message:"Welcome", 
+                                    items:users
+
+                                })
 
 });
 
